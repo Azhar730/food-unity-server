@@ -39,12 +39,12 @@ async function run() {
       const result = await foodCollection.findOne(query)
       res.send(result)
     })
-    // //save a job data in db
-    // app.post('/food', async(req,res)=>{
-    //   const foodData = req.body;
-    //   const result = await foodCollection.insertOne(foodData)
-    //   res.send(result)
-    // })
+    //save a food data in db
+    app.post('/food', async(req,res)=>{
+      const foodData = req.body;
+      const result = await foodCollection.insertOne(foodData)
+      res.send(result)
+    })
 
     //get all foods posted by a specific user
     app.get('/foods/:email', async(req,res)=>{
