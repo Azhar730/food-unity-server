@@ -28,10 +28,10 @@ async function run() {
     const foodCollection = client.db('FoodUnity').collection('food collection')
     const requestedFood = client.db('FoodUnity').collection('requested food')
 
-    app.get('/foods', async (req, res) => {
-      const result = await foodCollection.find().toArray()
-      res.send(result)
-    })
+    // app.get('/foods', async (req, res) => {
+    //   const result = await foodCollection.find().toArray()
+    //   res.send(result)
+    // })
     //get a single job data from db using job id
     app.get('/food/:id', async (req, res) => {
       const id = req.params.id;
