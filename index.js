@@ -54,12 +54,12 @@ async function run() {
       res.send(result)
     })
     //delete a specific added food from db
-    app.delete('/food/:id', async(req,res)=>{
-      const id = req.params.id;
-      const query = {_id: new ObjectId(id)}
-      const result = await foodCollection.deleteOne(query)
-      res.send(result)
-    })
+    // app.delete('/food/:id', async(req,res)=>{
+    //   const id = req.params.id;
+    //   const query = {_id: new ObjectId(id)}
+    //   const result = await foodCollection.deleteOne(query)
+    //   res.send(result)
+    // })
     //update a food data in db
     app.put('/food/:id', async(req,res)=>{
       const id = req.params.id;
