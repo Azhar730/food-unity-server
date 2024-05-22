@@ -75,12 +75,12 @@ async function run() {
       res.send(result)
     })
 
-    //save requested food data in db
-    // app.post('/requestedFood', async(req,res)=>{
-    //   const foodData = req.body;
-    //   const result = await requestedFood.insertOne(foodData)
-    //   res.send(result)
-    // })
+    // save requested food data in db
+    app.post('/requestedFood', async(req,res)=>{
+      const foodData = req.body;
+      const result = await requestedFood.insertOne(foodData)
+      res.send(result)
+    })
     //get requested foods foods posted by a specific user
     app.get('/requestedFoods/:email', async(req,res)=>{
       const email = req.params.email;
